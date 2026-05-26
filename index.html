@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAUber Shop — Buy Clean. Feed America.</title>
+<meta name="description" content="5% of every purchase is automatically donated to fight hunger in America. Shop cleaning, hygiene and health products. No extra cost to you.">
+<meta name="keywords" content="cleaning products donation, buy and donate, feeding america, hygiene products, SAUber, shop with purpose">
+<meta property="og:title" content="SAUber Shop — Buy Clean. Feed America.">
+<meta property="og:description" content="5% of every purchase donated to fight hunger. No extra cost.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://saubershop.com">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "SAUber Shop",
+  "url": "https://saubershop.com",
+  "description": "5% of every purchase automatically donated to fight hunger in America. Cleaning, hygiene and health products with purpose.",
+  "slogan": "Buy Clean. Feed America.",
+  "priceRange": "$$",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Cleaning, Hygiene & Health Products"
+  },
+  "knowsAbout": "Cleaning Products, Hygiene, Health, Charity, Food Donation",
+  "potentialAction": {
+    "@type": "DonateAction",
+    "name": "5% donated to fight hunger",
+    "description": "5% of our affiliate commission is donated monthly to fight hunger in America. Full transparency with monthly reports."
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --verde:#00A86B;
+  --verde2:#007A4D;
+  --verde-claro:#E8F8F0;
+  --azul:#1A73E8;
+  --amarelo:#FFB800;
+  --vermelho:#E53935;
+  --branco:#FFFFFF;
+  --cinza:#F8F9FA;
+  --cinza2:#E9ECEF;
+  --texto:#1A1A2E;
+  --texto2:#6C757D;
+  --borda:#DEE2E6;
+  --sombra:0 2px 12px rgba(0,0,0,0.08);
+  --sombra2:0 8px 32px rgba(0,0,0,0.12);
+}
+body{font-family:'Nunito',sans-serif;background:var(--cinza);color:var(--texto);font-size:15px;line-height:1.6}
+
+/* NAV DOAÇÃO */
+.nav-doacao{background:var(--verde);color:white;text-align:center;padding:8px 20px;font-size:0.82rem;font-weight:700;letter-spacing:0.3px}
+.nav-doacao span{background:rgba(255,255,255,0.2);padding:2px 10px;border-radius:100px;margin:0 6px}
+
+/* NAV */
+nav{background:white;padding:0;box-shadow:var(--sombra);position:sticky;top:0;z-index:200}
+.nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:12px 24px}
+.logo{font-size:1.8rem;font-weight:900;color:var(--verde);text-decoration:none;letter-spacing:-1px}
+.logo span{color:var(--texto)}
+.search-wrap{flex:1;max-width:560px;display:flex;border-radius:8px;overflow:hidden;border:2px solid var(--verde);background:white}
+.search-wrap input{flex:1;padding:10px 16px;border:none;outline:none;font-family:'Nunito',sans-serif;font-size:0.9rem}
+.search-wrap button{background:var(--verde);color:white;border:none;padding:10px 20px;cursor:pointer;font-size:1rem;transition:background 0.2s}
+.search-wrap button:hover{background:var(--verde2)}
+.nav-actions{display:flex;gap:20px;margin-left:auto;align-items:center}
+.nav-link{text-decoration:none;color:var(--texto2);font-size:0.82rem;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:2px;transition:color 0.2s}
+.nav-link:hover{color:var(--verde)}
+.nav-link-icon{font-size:1.3rem}
+.nav-cats{background:var(--texto);padding:0}
+.nav-cats-inner{max-width:1280px;margin:0 auto;display:flex;overflow-x:auto}
+.nav-cat{color:rgba(255,255,255,0.85);text-decoration:none;padding:9px 20px;font-size:0.8rem;font-weight:700;white-space:nowrap;transition:all 0.2s;display:flex;align-items:center;gap:6px}
+.nav-cat:hover,.nav-cat.active{background:var(--verde);color:white}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0A3D2E 0%,#1A6B4A 50%,#0A3D2E 100%);padding:50px 24px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,184,0,0.15) 0%,transparent 70%)}
+.hero-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,184,0,0.15);border:1px solid rgba(255,184,0,0.4);color:var(--amarelo);padding:6px 16px;border-radius:100px;font-size:0.75rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:white;line-height:1.15;margin-bottom:16px}
+.hero h1 span{color:var(--amarelo)}
+.hero-sub{color:rgba(255,255,255,0.8);font-size:1rem;margin-bottom:28px;font-weight:400;line-height:1.7}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-hero-principal{background:var(--amarelo);color:var(--texto);padding:14px 32px;border-radius:8px;font-weight:800;font-size:0.95rem;text-decoration:none;transition:all 0.2s;display:inline-block}
+.btn-hero-principal:hover{background:#E6A600;transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,184,0,0.4)}
+.btn-hero-sec{background:transparent;color:white;padding:14px 32px;border-radius:8px;font-weight:700;font-size:0.95rem;text-decoration:none;border:2px solid rgba(255,255,255,0.4);transition:all 0.2s;display:inline-block}
+.btn-hero-sec:hover{border-color:white;background:rgba(255,255,255,0.1)}
+.hero-stats{display:flex;gap:32px;margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.1)}
+.hero-stat-num{font-size:1.8rem;font-weight:900;color:var(--amarelo)}
+.hero-stat-label{font-size:0.72rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+
+/* DOAÇÃO CARD */
+.hero-doacao-card{background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:32px;text-align:center}
+.doacao-emoji{font-size:4rem;display:block;margin-bottom:16px}
+.doacao-card-titulo{font-size:1.1rem;font-weight:800;color:white;margin-bottom:8px}
+.doacao-card-sub{font-size:0.85rem;color:rgba(255,255,255,0.7);margin-bottom:24px}
+.doacao-pct{font-size:4rem;font-weight:900;color:var(--amarelo);line-height:1}
+.doacao-pct-label{font-size:0.8rem;color:rgba(255,255,255,0.6);margin-top:4px;margin-bottom:20px}
+.doacao-contador{background:rgba(255,255,255,0.1);border-radius:12px;padding:16px;margin-top:16px}
+.doacao-contador-label{font-size:0.7rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.doacao-contador-val{font-size:1.6rem;font-weight:900;color:white}
+.doacao-ong{font-size:0.72rem;color:rgba(255,255,255,0.5);margin-top:8px}
+
+/* COMO FUNCIONA */
+.como{background:white;padding:60px 24px}
+.como-inner{max-width:1280px;margin:0 auto}
+.sec-titulo{font-size:1.6rem;font-weight:900;color:var(--texto);margin-bottom:8px}
+.sec-sub{font-size:0.9rem;color:var(--texto2);margin-bottom:40px}
+.como-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.como-item{text-align:center;padding:24px 16px}
+.como-num{width:48px;height:48px;background:var(--verde);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;margin:0 auto 16px}
+.como-icon{font-size:2.5rem;margin-bottom:12px;display:block}
+.como-titulo{font-size:0.95rem;font-weight:800;color:var(--texto);margin-bottom:6px}
+.como-desc{font-size:0.82rem;color:var(--texto2);line-height:1.6}
+
+/* FILTROS */
+.filtros-section{background:white;border-bottom:1px solid var(--borda);padding:12px 24px;position:sticky;top:57px;z-index:100}
+.filtros-inner{max-width:1280px;margin:0 auto;display:flex;gap:8px;overflow-x:auto;align-items:center}
+.filtro-btn{background:var(--cinza);border:1.5px solid var(--borda);border-radius:100px;padding:7px 18px;font-size:0.8rem;font-weight:700;cursor:pointer;transition:all 0.2s;font-family:'Nunito',sans-serif;color:var(--texto);white-space:nowrap}
+.filtro-btn:hover,.filtro-btn.active{background:var(--verde);border-color:var(--verde);color:white}
+
+/* PRODUTOS */
+.produtos-section{padding:32px 24px}
+.produtos-inner{max-width:1280px;margin:0 auto}
+.produtos-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.produtos-titulo{font-size:1.1rem;font-weight:800;color:var(--texto)}
+.produtos-count{font-size:0.8rem;color:var(--texto2)}
+.produtos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+
+/* CARD PRODUTO */
+.produto{background:white;border:1.5px solid var(--borda);border-radius:12px;overflow:hidden;transition:all 0.25s}
+.produto:hover{box-shadow:var(--sombra2);border-color:var(--verde);transform:translateY(-3px)}
+.produto-img{background:var(--cinza);height:180px;display:flex;align-items:center;justify-content:center;font-size:4.5rem;position:relative;border-bottom:1px solid var(--borda)}
+.produto-badge{position:absolute;top:8px;left:8px;padding:4px 10px;border-radius:6px;font-size:0.68rem;font-weight:800}
+.badge-free{background:#E3F9ED;color:#00875A;border:1px solid #B3EDD4}
+.badge-off{background:#FFF3E0;color:#E65100;border:1px solid #FFCC80}
+.badge-hot{background:#FDECEA;color:#C62828;border:1px solid #FFCDD2}
+.produto-doacao-strip{background:var(--verde-claro);padding:5px 12px;display:flex;align-items:center;gap:6px;font-size:0.68rem;font-weight:800;color:var(--verde2);border-bottom:1px solid #C8EDD8}
+.produto-body{padding:14px}
+.produto-cat{font-size:0.65rem;font-weight:800;color:var(--verde);text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+.produto-nome{font-size:0.88rem;font-weight:700;color:var(--texto);line-height:1.35;margin-bottom:6px;min-height:36px}
+.produto-avaliacao{display:flex;align-items:center;gap:4px;margin-bottom:10px}
+.estrelas{color:#FFB800;font-size:0.72rem}
+.avaliacao-num{font-size:0.68rem;color:var(--texto2)}
+.produto-btns{display:flex;flex-direction:column;gap:7px}
+.btn-amz{display:block;text-align:center;padding:10px;border-radius:7px;font-size:0.82rem;font-weight:800;text-decoration:none;transition:all 0.2s;background:#FF9900;color:#111}
+.btn-amz:hover{background:#E68800;transform:scale(1.02)}
+
+/* IMPACTO */
+.impacto{background:var(--verde);padding:60px 24px}
+.impacto-inner{max-width:1280px;margin:0 auto;text-align:center}
+.impacto h2{font-size:2rem;font-weight:900;color:white;margin-bottom:8px}
+.impacto-sub{color:rgba(255,255,255,0.8);font-size:1rem;margin-bottom:40px}
+.impacto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:40px}
+.impacto-card{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:16px;padding:28px;text-align:center}
+.impacto-num{font-size:2.5rem;font-weight:900;color:var(--amarelo);margin-bottom:6px}
+.impacto-label{font-size:0.82rem;color:rgba(255,255,255,0.8);font-weight:600}
+.impacto-ong{background:rgba(255,255,255,0.1);border-radius:12px;padding:20px 32px;display:inline-flex;align-items:center;gap:16px}
+.impacto-ong-icon{font-size:2rem}
+.impacto-ong-nome{font-size:0.9rem;font-weight:800;color:white}
+.impacto-ong-desc{font-size:0.78rem;color:rgba(255,255,255,0.7);text-align:left}
+
+/* AVISO */
+.aviso-afiliado{background:white;border-top:1px solid var(--borda);padding:16px 24px;text-align:center;font-size:0.75rem;color:var(--texto2)}
+.aviso-afiliado strong{color:var(--verde)}
+
+/* FOOTER */
+footer{background:var(--texto);color:white;padding:48px 24px 24px}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:32px}
+.footer-logo{font-size:2rem;font-weight:900;color:var(--verde);letter-spacing:-1px;margin-bottom:12px}
+.footer-logo span{color:white}
+.footer-desc{font-size:0.82rem;color:rgba(255,255,255,0.6);line-height:1.7}
+.footer-titulo{font-size:0.75rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.4);margin-bottom:16px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.82rem;transition:color 0.2s}
+.footer-links a:hover{color:var(--verde)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;display:flex;justify-content:space-between;font-size:0.75rem;color:rgba(255,255,255,0.4);flex-wrap:wrap;gap:8px}
+
+/* BR LINK */
+.br-link{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 20px;text-align:center;margin:24px 0}
+.br-link a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.8rem}
+.br-link a:hover{color:var(--verde)}
+
+@media(max-width:768px){
+  .nav-inner{padding:10px 16px;gap:10px}
+  .nav-actions{display:none}
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .hero-doacao-card{display:none}
+  .como-grid{grid-template-columns:1fr 1fr}
+  .impacto-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .produtos-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- DONATION BAR -->
+<div class="nav-doacao">
+  🍽️ <span>5% of every purchase</span> is automatically donated to fight <strong>child hunger in America</strong> — at no extra cost to you!
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">SAU<span>ber</span></a>
+    <div class="search-wrap">
+      <input type="text" id="busca" placeholder="Search cleaning, hygiene, health products..." onkeypress="buscar(event)">
+      <button onclick="buscarClick()">🔍</button>
+    </div>
+    <div class="nav-actions">
+      <a href="#impact" class="nav-link">
+        <span class="nav-link-icon">🍽️</span>
+        <span>Donations</span>
+      </a>
+      <a href="#how" class="nav-link">
+        <span class="nav-link-icon">❓</span>
+        <span>How it works</span>
+      </a>
+      <a href="https://saubershop.com.br" class="nav-link">
+        <span class="nav-link-icon">🇧🇷</span>
+        <span>PT</span>
+      </a>
+    </div>
+  </div>
+  <div class="nav-cats">
+    <div class="nav-cats-inner">
+      <a href="#" class="nav-cat active" onclick="filtrar('all',this);return false">🏠 All</a>
+      <a href="#" class="nav-cat" onclick="filtrar('cleaning',this);return false">🧹 Cleaning</a>
+      <a href="#" class="nav-cat" onclick="filtrar('hygiene',this);return false">🧼 Hygiene</a>
+      <a href="#" class="nav-cat" onclick="filtrar('health',this);return false">💊 Health</a>
+      <a href="#" class="nav-cat" onclick="filtrar('packaging',this);return false">📦 Packaging</a>
+      <a href="#" class="nav-cat" onclick="filtrar('medical',this);return false">🏥 Medical</a>
+      <a href="#" class="nav-cat" style="color:var(--amarelo)" onclick="filtrar('free',this);return false">🚚 Free Shipping</a>
+      <a href="#" class="nav-cat" style="color:#FF6B6B" onclick="filtrar('off',this);return false">🔥 Deals</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">🍽️ Shop with Purpose</div>
+      <h1>Buy Clean.<br>Feed.<br><span>Change Lives.</span></h1>
+      <p class="hero-sub">Every product you buy through SAUber automatically generates a donation for children suffering from hunger in America. <strong style="color:white">No extra cost to you.</strong> No complications.</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn-hero-principal">🛒 Shop Now</a>
+        <a href="#how" class="btn-hero-sec">How does it work?</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">$0</div>
+          <div class="hero-stat-label">Total donated</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">5%</div>
+          <div class="hero-stat-label">Per purchase</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">0</div>
+          <div class="hero-stat-label">Meals donated</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-doacao-card">
+      <span class="doacao-emoji">🍽️</span>
+      <div class="doacao-card-titulo">Automatic Donation Program</div>
+      <div class="doacao-card-sub">Every purchase made through SAUber</div>
+      <div class="doacao-pct">5%</div>
+      <div class="doacao-pct-label">is automatically donated</div>
+      <div style="font-size:0.78rem;color:rgba(255,255,255,0.7);margin-bottom:8px">to fight child hunger in America</div>
+      <div class="doacao-contador">
+        <div class="doacao-contador-label">Total donated since launch</div>
+        <div class="doacao-contador-val">$0.00</div>
+      </div>
+      <div class="doacao-ong">5% of our affiliate commission donated monthly to fight hunger. Full transparency — monthly reports published.</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="como" id="how">
+  <div class="como-inner">
+    <div class="sec-titulo">How does it work? It's simple!</div>
+    <div class="sec-sub">You don't pay anything extra. The donation comes from our affiliate commission.</div>
+    <div class="como-grid">
+      <div class="como-item">
+        <div class="como-num">1</div>
+        <span class="como-icon">🔍</span>
+        <div class="como-titulo">Choose a product</div>
+        <div class="como-desc">Browse SAUber and find the cleaning, hygiene or health product you need.</div>
+      </div>
+      <div class="como-item">
+        <div class="como-num">2</div>
+        <span class="como-icon">🛒</span>
+        <div class="como-titulo">Buy on Amazon</div>
+        <div class="como-desc">Click the button and complete your purchase directly on Amazon with full security and guarantee.</div>
+      </div>
+      <div class="como-item">
+        <div class="como-num">3</div>
+        <span class="como-icon">💰</span>
+        <div class="como-titulo">SAUber earns commission</div>
+        <div class="como-desc">As an official Amazon affiliate, we receive a small commission from Amazon — no extra cost to you.</div>
+      </div>
+      <div class="como-item">
+        <div class="como-num">4</div>
+        <span class="como-icon">🍽️</span>
+        <div class="como-titulo">5% fights hunger</div>
+        <div class="como-desc">Automatically, 5% of our commission is donated to fight child hunger in America. You help without spending more!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<div class="filtros-section">
+  <div class="filtros-inner">
+    <button class="filtro-btn active" onclick="filtrar('all',this)">✅ All</button>
+    <button class="filtro-btn" onclick="filtrar('free',this)">🚚 Free Shipping</button>
+    <button class="filtro-btn" onclick="filtrar('off',this)">💰 On Sale</button>
+    <button class="filtro-btn" onclick="filtrar('cleaning',this)">🧹 Cleaning</button>
+    <button class="filtro-btn" onclick="filtrar('hygiene',this)">🧼 Hygiene</button>
+    <button class="filtro-btn" onclick="filtrar('health',this)">💊 Health</button>
+    <button class="filtro-btn" onclick="filtrar('packaging',this)">📦 Packaging</button>
+    <button class="filtro-btn" onclick="filtrar('medical',this)">🏥 Medical</button>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="produtos-section" id="products">
+  <div class="produtos-inner">
+    <div class="produtos-header">
+      <div class="produtos-titulo">🔥 Featured Products</div>
+      <div class="produtos-count" id="produtos-count">16 products</div>
+    </div>
+    <div class="produtos-grid" id="grid">
+
+      <div class="produto" data-cat="cleaning" data-tag="free">
+        <div class="produto-img">🧴<span class="produto-badge badge-free">🚚 Free Shipping</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Cleaning</div>
+          <div class="produto-nome">Multi-Purpose Concentrated Cleaner 500ml</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★★</span><span class="avaliacao-num">(2,341)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=multi+purpose+cleaner&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto" data-cat="hygiene" data-tag="off">
+        <div class="produto-img">🧼<span class="produto-badge badge-off">💰 30% OFF</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Hygiene</div>
+          <div class="produto-nome">Premium Antibacterial Hand Soap 12oz</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★☆</span><span class="avaliacao-num">(891)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=antibacterial+hand+soap&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto" data-cat="cleaning" data-tag="off">
+        <div class="produto-img">🪣<span class="produto-badge badge-off">💰 50% OFF</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Cleaning</div>
+          <div class="produto-nome">Disinfectant Spray Lavender 32oz</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★★</span><span class="avaliacao-num">(4,102)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=disinfectant+spray+lavender&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto" data-cat="health" data-tag="free hot">
+        <div class="produto-img">💊<span class="produto-badge badge-hot">🔥 Best Seller</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Health</div>
+          <div class="produto-nome">Vitamin C 1000mg Effervescent Tablets 10ct</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★★</span><span class="avaliacao-num">(7,854)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=vitamin+c+1000mg+effervescent&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto" data-cat="packaging" data-tag="free">
+        <div class="produto-img">📦<span class="produto-badge badge-free">🚚 Free Shipping</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Packaging</div>
+          <div class="produto-nome">Cardboard Boxes Variety Pack 20ct</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★☆</span><span class="avaliacao-num">(1,230)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=cardboard+boxes+variety+pack&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto" data-cat="medical" data-tag="off">
+        <div class="produto-img">🏥<span class="produto-badge badge-off">💰 30% OFF</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Medical</div>
+          <div class="produto-nome">Hand Sanitizer Gel 70% Alcohol 16oz</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★★</span><span class="avaliacao-num">(3,567)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=hand+sanitizer+gel+70+alcohol&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto" data-cat="cleaning" data-tag="free">
+        <div class="produto-img">🧽<span class="produto-badge badge-free">🚚 Free Shipping</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Cleaning</div>
+          <div class="produto-nome">Heavy Duty Scrub Sponges 12-Pack</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★★</span><span class="avaliacao-num">(5,012)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=heavy+duty+scrub+sponges&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto" data-cat="hygiene" data-tag="free hot">
+        <div class="produto-img">🧴<span class="produto-badge badge-hot">🔥 Popular</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Hygiene</div>
+          <div class="produto-nome">Clarifying Shampoo for Oily Hair 10oz</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★☆</span><span class="avaliacao-num">(2,109)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=clarifying+shampoo+oily+hair&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto" data-cat="cleaning" data-tag="off">
+        <div class="produto-img">🧹<span class="produto-badge badge-off">💰 40% OFF</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Cleaning</div>
+          <div class="produto-nome">Professional Broom with Telescopic Handle</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★★</span><span class="avaliacao-num">(3,421)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=professional+broom+telescopic&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto" data-cat="health" data-tag="free">
+        <div class="produto-img">🌡️<span class="produto-badge badge-free">🚚 Free Shipping</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Health</div>
+          <div class="produto-nome">Non-Contact Infrared Digital Thermometer</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★★</span><span class="avaliacao-num">(8,234)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=infrared+digital+thermometer&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto" data-cat="hygiene" data-tag="off">
+        <div class="produto-img">🪥<span class="produto-badge badge-off">💰 25% OFF</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Hygiene</div>
+          <div class="produto-nome">Rechargeable Electric Toothbrush</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★☆</span><span class="avaliacao-num">(4,567)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=rechargeable+electric+toothbrush&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto" data-cat="cleaning" data-tag="free off">
+        <div class="produto-img">🫧<span class="produto-badge badge-free">🚚 Free Shipping</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Cleaning</div>
+          <div class="produto-nome">Bleach Cleaner 64oz Unscented</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★★</span><span class="avaliacao-num">(6,789)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=bleach+cleaner+unscented&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto" data-cat="medical" data-tag="free">
+        <div class="produto-img">🩺<span class="produto-badge badge-free">🚚 Free Shipping</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Medical</div>
+          <div class="produto-nome">Nitrile Disposable Gloves 100ct Medium</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★★</span><span class="avaliacao-num">(9,123)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=nitrile+disposable+gloves+medium&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto" data-cat="health" data-tag="off">
+        <div class="produto-img">🥥<span class="produto-badge badge-off">💰 35% OFF</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Health</div>
+          <div class="produto-nome">Organic Extra Virgin Coconut Oil 16oz</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★☆</span><span class="avaliacao-num">(3,890)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=organic+extra+virgin+coconut+oil&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto" data-cat="packaging" data-tag="off">
+        <div class="produto-img">🛍️<span class="produto-badge badge-off">💰 20% OFF</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Packaging</div>
+          <div class="produto-nome">Biodegradable Kraft Paper Bags 100ct</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★★</span><span class="avaliacao-num">(2,456)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=biodegradable+kraft+paper+bags&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto" data-cat="hygiene" data-tag="free">
+        <div class="produto-img">🧻<span class="produto-badge badge-free">🚚 Free Shipping</span></div>
+        <div class="produto-doacao-strip">🍽️ 5% of this purchase fights hunger</div>
+        <div class="produto-body">
+          <div class="produto-cat">Hygiene</div>
+          <div class="produto-nome">Double Roll Toilet Paper 48 Rolls</div>
+          <div class="produto-avaliacao"><span class="estrelas">★★★★★</span><span class="avaliacao-num">(12,341)</span></div>
+          <div class="produto-btns">
+            <a href="https://www.amazon.com/s?k=double+roll+toilet+paper+48+rolls&tag=techoferta0a3-20" target="_blank" class="btn-amz">📦 Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section class="impacto" id="impact">
+  <div class="impacto-inner">
+    <h2>🍽️ Our Impact Fighting Hunger</h2>
+    <div class="impacto-sub">Every purchase you make through SAUber helps feed children in need across America.</div>
+    <div class="impacto-grid">
+      <div class="impacto-card">
+        <div class="impacto-num">$0</div>
+        <div class="impacto-label">Total donated to fight hunger</div>
+      </div>
+      <div class="impacto-card">
+        <div class="impacto-num">5%</div>
+        <div class="impacto-label">Of every commission donated</div>
+      </div>
+      <div class="impacto-card">
+        <div class="impacto-num">0</div>
+        <div class="impacto-label">Meals donated so far</div>
+      </div>
+    </div>
+    <div class="impacto-ong">
+      <span class="impacto-ong-icon">🍽️</span>
+      <div>
+        <div class="impacto-ong-nome">Fighting Child Hunger in America</div>
+        <div class="impacto-ong-desc">5% of our monthly commission is donated to fight hunger. Monthly transparency reports published on this page.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVISO AFILIADO -->
+<div class="aviso-afiliado">
+  <strong>ℹ️ Affiliate Disclosure:</strong> SAUber is a curated product site with Amazon affiliate links. When you purchase through our links, we earn a commission <strong>at no extra cost to you</strong>. 5% of that commission is donated monthly to fight hunger. All purchases are made directly on Amazon with full security.
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">SAU<span>ber</span></div>
+        <p class="footer-desc">Curated cleaning, hygiene and health products. Every purchase automatically donates to fight child hunger in America. No extra cost to you.</p>
+        <div class="br-link" style="margin-top:16px">
+          <a href="https://saubershop.com.br">🇧🇷 Also available in Portuguese — saubershop.com.br</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-titulo">Categories</div>
+        <ul class="footer-links">
+          <li><a href="#">🧹 Cleaning</a></li>
+          <li><a href="#">🧼 Hygiene</a></li>
+          <li><a href="#">💊 Health</a></li>
+          <li><a href="#">📦 Packaging</a></li>
+          <li><a href="#">🏥 Medical</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-titulo">Company</div>
+        <ul class="footer-links">
+          <li><a href="#">About SAUber</a></li>
+          <li><a href="#">How it works</a></li>
+          <li><a href="#">Donation Reports</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-titulo">Languages</div>
+        <ul class="footer-links">
+          <li><a href="#">🇺🇸 English (current)</a></li>
+          <li><a href="https://saubershop.com.br">🇧🇷 Português</a></li>
+          <li><a href="#">🇩🇪 Deutsch (soon)</a></li>
+          <li><a href="#">🇫🇷 Français (soon)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SAUber Shop — All rights reserved.</span>
+      <span>Amazon Affiliate Links — Buy Clean. Feed America.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function filtrar(cat, btn) {
+  const cards = document.querySelectorAll('.produto');
+  let visiveis = 0;
+  cards.forEach(card => {
+    const cardCat = card.dataset.cat || '';
+    const cardTag = card.dataset.tag || '';
+    const mostrar = cat === 'all' || cardCat === cat || cardTag.includes(cat);
+    card.style.display = mostrar ? 'block' : 'none';
+    if (mostrar) visiveis++;
+  });
+  document.getElementById('produtos-count').textContent = visiveis + ' products';
+  if (btn) {
+    document.querySelectorAll('.filtro-btn, .nav-cat').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+}
+
+function buscar(e) {
+  if (e.key === 'Enter') buscarClick();
+}
+function buscarClick() {
+  const q = document.getElementById('busca').value.trim();
+  if (q) window.open('https://www.amazon.com/s?k=' + encodeURIComponent(q) + '&tag=techoferta0a3-20', '_blank');
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    if (id === '#') return;
+    e.preventDefault();
+    document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>
